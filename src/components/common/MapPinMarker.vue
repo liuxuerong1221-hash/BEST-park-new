@@ -23,10 +23,6 @@
             <stop :stop-color="alert ? '#FF4848' : '#0C84FF'"/>
             <stop offset="1" :stop-color="alert ? '#FF1414' : '#1DEAFF'"/>
           </linearGradient>
-          <linearGradient :id="`pin-tri-${uid}`" x1="7.25" y1="42" x2="7.25" y2="52.5" gradientUnits="userSpaceOnUse">
-            <stop :stop-color="alert ? '#FF4848' : '#0C84FF'"/>
-            <stop offset="1" :stop-color="alert ? '#FF1414' : '#1DEAFF'"/>
-          </linearGradient>
         </defs>
         <circle cx="20" cy="20" r="19.5" :fill="alert ? 'rgba(79, 2, 2, 0.7)' : 'rgba(2, 37, 79, 0.6)'" :stroke="`url(#pin-stroke-${uid})`"/>
         <!-- 中心图标通过 slot 插入，接收 iconGradientId 作为渐变色 ID -->
@@ -39,8 +35,8 @@
             </linearGradient>
           </defs>
         </slot>
-        <!-- 底部三角指针 -->
-        <path d="M12.75 42 L19.75 52.5 L27.25 42 Q19.75 46 12.75 42 Z" :fill="`url(#pin-tri-${uid})`"/>
+        <!-- 底部三角指针：纯色不透明 -->
+        <path d="M12.75 42 L19.75 52.5 L27.25 42 Q19.75 46 12.75 42 Z" :fill="alert ? '#FF3030' : '#1DEAFF'"/>
       </svg>
     </div>
 
