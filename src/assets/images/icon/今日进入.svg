@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <defs>
+    <linearGradient id="pp-enter-bg" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(237 0.5 0.5)">
+      <stop offset="14%" stop-color="#00AEFF"/>
+      <stop offset="84%" stop-color="#003953"/>
+    </linearGradient>
+    <linearGradient id="pp-enter-icon" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="64%" stop-color="#97D6FF"/>
+      <stop offset="86%" stop-color="#5EC0FF"/>
+      <stop offset="100%" stop-color="#8DD2FF"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="20" cy="20" rx="20" ry="20" fill="url(#pp-enter-bg)"/>
+  <path transform="translate(10 9)" fill="url(#pp-enter-icon)" d="M20.0005 17.8168L20.0005 0L3.5542 0L3.5542 6.85263L4.92474 6.85263L4.92474 1.37054L17.2594 1.37054L11.7773 4.11158L11.7773 16.4463L4.92474 16.4463L4.92474 12.3347L3.55423 12.3347L3.55423 17.8168L11.7773 17.8168L11.7773 21.9284L20.0005 17.8168ZM0 10.964L6.8526 10.964L6.8526 13.7051L10.9642 9.59352L6.8526 5.48193L6.8526 8.22298L0 8.22298L0 10.964Z"/>
+</svg>

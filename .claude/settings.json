@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git checkout *)",
+      "Bash(git fetch *)",
+      "Bash(git rebase *)",
+      "Bash(git stash *)",
+      "Bash(git add *)",
+      "Bash(git reset *)",
+      "Bash(ls /tmp/ | grep -i \"png\\\\|jpg\\\\|jpeg\\\\|webp\" | head -10)",
+      "Read(//private/tmp/**)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park status)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park diff src/components/common/AppHeader.vue)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park add src/components/common/SecurityFloatingEntries.vue src/components/common/AppHeader.vue src/components/panels/AlertHandlingPanel.vue src/components/panels/AlertListPanel.vue src/components/panels/CameraDetailPanel.vue src/components/panels/CameraListPanel.vue src/components/charts/MachineryAlertTrendChart.vue src/components/panels/MachineryAlertRecordPanel.vue src/components/panels/MachineryAlertTrendPanel.vue src/components/panels/MachineryMonitorPanel.vue src/components/panels/TrajectoryQueryPanel.vue src/views/AlertDetailView.vue src/views/SecurityMachineryView.vue src/views/SecurityTrajectoryView.vue src/assets/images/bg-机房动环.jpg src/router/index.ts src/types/components.d.ts)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park commit -m ' *)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park push origin main)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park remote -v)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park remote set-url origin git@github.com:liuxuerong1221-hash/BEST.git)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park remote set-url origin https://github.com/liuxuerong1221-hash/BEST.git)",
+      "Bash(git -C /Users/chenjiao/Documents/01-cc文件/BEST_park log --oneline origin/main..HEAD)",
+      "Bash(npx vercel *)",
+      "Bash(npx gh-pages *)",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(d\\)\")",
+      "Bash(pkill -f cloudflared)",
+      "Bash(/tmp/cloudflared tunnel *)",
+      "Read(//tmp/**)",
+      "Bash(grep -E \"^-.*\\\\.\\(json|yml|yaml\\)$\")"
+    ]
+  }
+}

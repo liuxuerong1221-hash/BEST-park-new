@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env.local
+*.local
+.d2c/
+.tmp_dsl.json
+vite-dev.err.log
+vite-dev.out.log
+# 根目录里的临时预览构建产物
+/assets/
+
+# 原型参考图
+prd/

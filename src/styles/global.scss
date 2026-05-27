@@ -1,0 +1,301 @@
+// variables.scss 由 vite.config.ts additionalData 全局注入，此处无需 @use
+
+@font-face {
+  font-family: 'YouSheBiaoTiHei';
+  src: url('../font/YouSheBiaoTiHei-2.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'AlimamaShuHeiTi';
+  src: url('../font/AlimamaShuHeiTi-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: $font-body;
+  font-size: $font-size-sm;
+  color: $color-text-1;
+  background-color: $color-bg;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+// ===== 大屏风格化 Element Plus MessageBox =====
+.el-overlay:has(.screen-confirm-box) {
+  background: rgba(2, 12, 28, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.screen-confirm-box.el-message-box {
+  width: 420px;
+  padding: 0;
+  background: linear-gradient(180deg, rgba(14, 38, 71, 0.96) 0%, rgba(6, 19, 40, 0.96) 100%);
+  border: 1px solid rgba(0, 174, 255, 0.55);
+  border-radius: $radius-md;
+  box-shadow:
+    0 0 24px rgba(0, 174, 255, 0.25),
+    inset 0 0 12px rgba(0, 174, 255, 0.12);
+  font-family: $font-body;
+  color: $color-text-1;
+  position: relative;
+  overflow: hidden;
+
+  // 右下角装饰亮线
+  &::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: $color-primary-bright;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+  }
+
+  .el-message-box__header {
+    padding: 16px 20px;
+    background: linear-gradient(90deg, rgba(0, 174, 255, 0.22) 0%, rgba(0, 174, 255, 0) 100%);
+    border-bottom: 1px solid rgba(0, 174, 255, 0.3);
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      width: 3px;
+      height: 14px;
+      background: $color-primary-bright;
+      box-shadow: 0 0 6px $color-primary;
+      transform: translateY(-50%);
+    }
+  }
+
+  .el-message-box__title {
+    padding-left: 12px;
+    font-family: $font-body;
+    font-size: $font-size-sm;
+    font-weight: 700;
+    color: $color-text-1;
+    letter-spacing: 1px;
+
+    > span {
+      color: $color-text-1;
+    }
+  }
+
+  .el-message-box__headerbtn {
+    top: 14px;
+    right: 14px;
+    width: 22px;
+    height: 22px;
+
+    .el-message-box__close {
+      color: $color-text-2;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+
+    &:hover .el-message-box__close,
+    &:focus .el-message-box__close {
+      color: $color-primary-bright;
+    }
+  }
+
+  .el-message-box__content {
+    padding: 22px 20px;
+    color: $color-text-2;
+    font-size: $font-size-sm;
+    line-height: 1.6;
+  }
+
+  .el-message-box__container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .el-message-box__status {
+    position: static;
+    top: auto;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1;
+    flex-shrink: 0;
+    transform: none;
+
+    &::before {
+      line-height: 1;
+    }
+
+    &.warning,
+    &.is-warning {
+      color: $color-accent-light;
+    }
+  }
+
+  .el-message-box__status + .el-message-box__message {
+    padding-left: 0;
+
+    > p {
+      color: $color-text-1;
+    }
+  }
+
+  .el-message-box__message {
+    flex: 1;
+    min-width: 0;
+
+    > p {
+      color: $color-text-1;
+      margin: 0;
+      line-height: 1.6;
+    }
+  }
+
+  .el-message-box__btns {
+    padding: 0 20px 18px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    button {
+      min-width: 88px;
+      height: 34px;
+      padding: 0 16px;
+      border-radius: $radius-sm;
+      font-family: $font-body;
+      font-size: $font-size-xs;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: all 0.2s ease;
+
+      // 取消按钮（通过文本内容或第一个按钮）
+      &:first-child,
+      &.el-button--default {
+        background: rgba(0, 174, 255, 0.06) !important;
+        border: 1px solid rgba(0, 174, 255, 0.3) !important;
+        color: $color-text-2 !important;
+
+        &:hover,
+        &:focus {
+          background: rgba(0, 174, 255, 0.14) !important;
+          border-color: $color-primary !important;
+          color: $color-text-1 !important;
+        }
+      }
+
+      // 确定按钮
+      &.el-button--primary {
+        background: linear-gradient(0deg, rgba(1, 158, 244, 0.9) 0%, rgba(0, 174, 255, 0.5) 100%) !important;
+        border: 1px solid $color-primary-bright !important;
+        color: $color-text-1 !important;
+        box-shadow: 0 0 6px rgba(0, 174, 255, 0.5) !important;
+
+        &:hover,
+        &:focus {
+          background: linear-gradient(0deg, rgba(77, 242, 255, 0.9) 0%, rgba(0, 174, 255, 0.7) 100%) !important;
+          box-shadow: 0 0 10px rgba(77, 242, 255, 0.7) !important;
+        }
+      }
+    }
+  }
+}
+
+// ===== 大屏风格化 Element Plus Message =====
+.el-message.screen-message {
+  min-width: 260px;
+  padding: 12px 18px;
+  background: linear-gradient(90deg, rgba(14, 38, 71, 0.96) 0%, rgba(6, 19, 40, 0.96) 100%);
+  border: 1px solid rgba(0, 174, 255, 0.55);
+  border-radius: $radius-sm;
+  box-shadow:
+    0 0 14px rgba(0, 174, 255, 0.3),
+    inset 0 0 8px rgba(0, 174, 255, 0.12);
+  font-family: $font-body;
+  backdrop-filter: blur(2px);
+
+  .el-message__content {
+    color: $color-text-1;
+    font-size: $font-size-xs;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  .el-message__icon {
+    font-size: 16px;
+  }
+
+  &.el-message--success {
+    border-color: rgba(46, 208, 176, 0.7);
+    box-shadow:
+      0 0 14px rgba(46, 208, 176, 0.35),
+      inset 0 0 8px rgba(46, 208, 176, 0.12);
+
+    .el-message__icon {
+      color: $color-success;
+    }
+  }
+
+  &.el-message--warning {
+    border-color: rgba(249, 185, 51, 0.7);
+    box-shadow:
+      0 0 14px rgba(249, 185, 51, 0.35),
+      inset 0 0 8px rgba(249, 185, 51, 0.12);
+
+    .el-message__icon {
+      color: $color-warning;
+    }
+  }
+
+  &.el-message--error {
+    border-color: rgba(216, 47, 41, 0.7);
+    box-shadow:
+      0 0 14px rgba(216, 47, 41, 0.35),
+      inset 0 0 8px rgba(216, 47, 41, 0.12);
+
+    .el-message__icon {
+      color: $color-error;
+    }
+  }
+
+  &.el-message--info {
+    .el-message__icon {
+      color: $color-primary-bright;
+    }
+  }
+
+  .el-message__closeBtn {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover {
+      color: $color-text-1;
+    }
+  }
+}

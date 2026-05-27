@@ -1,0 +1,73 @@
+// ===== Design Tokens — 来自 DSL (layer: 2:05675) =====
+
+// ----- 背景 -----
+$color-bg:              #12233A;              // 页面主背景
+$color-bg-panel:        rgba(10, 29, 53, 0.6); // 面板半透明背景
+$color-bg-overlay:      rgba(0, 30, 58, 0.5);  // 深色遮罩
+
+// ----- 主色调（蓝色科技感）-----
+$color-primary:         #00AEFF;             // 文字蓝/主要强调色
+$color-primary-bright:  #4DF2FF;             // 亮青蓝（高亮数字/边框）
+$color-primary-glow:    rgba(0, 174, 255, 0.4); // 发光效果色
+$color-primary-dim:     rgba(0, 174, 255, 0.06); // 极淡蓝底
+
+// ----- 副色调（黄色警示/金色）-----
+$color-accent:          #EDD505;             // 文字黄色
+$color-accent-light:    #FFE92B;             // 亮黄
+$color-accent-glow:     rgba(255, 186, 0, 0.4);
+
+// ----- 语义色 -----
+$color-success:         #2ED0B0;             // 正常/在线状态
+$color-warning:         #F9B933;             // 警告
+$color-error:           #D82F29;             // 异常/离线
+
+// ----- 文字 -----
+$color-text-1:          #FFFFFF;             // 主要文字
+$color-text-2:          #D1EDFF;             // 次要文字（浅蓝白）
+$color-text-3:          #8AFFF8;             // 点缀文字（青色）
+$color-text-num:        #4EF4FF;             // 数字高亮
+
+// ----- 边框/线条 -----
+$color-border:          rgba(0, 174, 255, 0.3);  // 面板边框
+$color-line:            rgba(0, 174, 255, 0.2);  // 分隔线
+$color-line-bright:     #00AEFF;
+
+// ----- 阴影/发光 -----
+$shadow-panel:          0px 4px 10px 0px #021035;
+$shadow-glow-blue:      0px 0px 3px 2px #00AEFF;
+$shadow-glow-yellow:    0px 0px 3px 2px #EDD505;
+$shadow-inset-blue:     inset 0px 0px 6px 0px #00DFFF;
+
+// ===== 字体 =====
+$font-title:    'YouSheBiaoTiHei', 'PingFang SC', sans-serif;  // 大标题装饰字
+$font-number:   'DINAlternate', 'PingFang SC', sans-serif;     // 数据数字
+$font-body:     'PingFang SC', 'Source Han Sans SC', 'Microsoft YaHei', sans-serif;
+
+$font-size-xxl: 46px;   // 主标题 YouSheBiaoTiHei
+$font-size-xl:  30px;   // 大数字 DINAlternate Bold
+$font-size-lg:  24px;   // 中数字 DINAlternate Bold
+$font-size-md:  20px;   // 小标题
+$font-size-sm:  16px;   // 正文 Medium
+$font-size-xs:  14px;   // 辅助文字
+$font-size-xxs: 12px;   // 标注/单位
+
+// ===== 间距 =====
+$spacing-xs:    4px;
+$spacing-sm:    8px;
+$spacing-md:    16px;
+$spacing-lg:    24px;
+$spacing-xl:    32px;
+
+// ===== 圆角 =====
+$radius-sm:     4px;
+$radius-md:     8px;
+$radius-lg:     12px;
+
+// ===== 大屏布局基准 =====
+$screen-width:  1920px;
+$screen-height: 1080px;
+$panel-left-w:  392px;
+$panel-right-w: 390px;
+$panel-compass: 151px;
+$header-h:      81px;
+$bottom-nav-h:  67px;

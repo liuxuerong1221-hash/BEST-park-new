@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+  <defs>
+    <linearGradient id="pp-leave-bg" x1="0" y1="0" x2="1" y2="1" gradientTransform="rotate(230 0.5 0.5)">
+      <stop offset="13%" stop-color="#4DF2FF"/>
+      <stop offset="86%" stop-color="#01604F"/>
+    </linearGradient>
+    <linearGradient id="pp-leave-icon" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="28%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#4DF2FF"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="20" cy="20" rx="20" ry="20" fill="url(#pp-leave-bg)"/>
+  <path transform="translate(8 9)" fill="url(#pp-leave-icon)" d="M22.6306 17.5738L22.6306 0L6.40864 0L6.40864 6.75918L7.76049 6.75918L7.76049 1.35185L19.927 1.35185L14.5196 4.05552L14.5196 16.222L7.76049 16.222L7.76049 12.1665L6.40866 12.1665L6.40866 17.5738L14.5196 17.5738L14.5196 21.6293L22.6306 17.5738ZM10.8146 10.8146L4.05549 10.8146L4.05549 13.5182L0 9.46274L4.05549 5.40723L4.05549 8.11089L10.8146 8.11089L10.8146 10.8146Z"/>
+</svg>
