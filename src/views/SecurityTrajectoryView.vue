@@ -237,7 +237,7 @@ function closeMonitor() {
   &__bg {
     position: absolute;
     inset: 0;
-    background-image: url('@/assets/images/大屏背景@2x.png');
+    background-image: url('@/assets/images/大屏背景@2x.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     z-index: 0;
