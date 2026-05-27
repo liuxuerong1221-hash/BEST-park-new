@@ -1,0 +1,112 @@
+===========================================
+BEST-park-new 推送到 GitHub 的完整步骤
+===========================================
+
+问题说明：
+当前遇到 403 权限错误，这是因为 GitHub 的个人访问令牌（PAT）权限不足。
+
+解决方案：
+需要您手动在 GitHub 上创建仓库，然后推送代码。
+
+===========================================
+第一步：在 GitHub 上创建新仓库
+===========================================
+
+1. 打开浏览器，访问：https://github.com/new
+
+2. 填写仓库信息：
+   - Repository name: BEST-park-new
+   - Description: BEST园区可视化集成平台 - 新版本
+   - 选择 Public（公开）
+   - ⚠️ 重要：不要勾选任何初始化选项
+     □ Add a README file
+     □ Add .gitignore
+     □ Choose a license
+
+3. 点击 "Create repository" 按钮
+
+===========================================
+第二步：推送代码到新仓库
+===========================================
+
+创建仓库后，GitHub 会显示一个页面，上面有推送命令。
+
+请在终端中执行以下命令：
+
+cd /Users/chenjiao/Documents/01-cc文件/BEST-park-new
+
+# 如果 remote 已存在，先删除
+git remote remove origin
+
+# 添加新的 remote（使用您的 GitHub 凭据）
+git remote add origin https://github.com/liuxuerong1221-hash/BEST-park-new.git
+
+# 推送代码
+git push -u origin main
+
+⚠️ 如果推送时要求输入用户名和密码：
+- Username: liuxuerong1221-hash
+- Password: 使用您的 GitHub 个人访问令牌（PAT），不是密码
+
+如果没有 PAT 或 PAT 过期，请访问：
+https://github.com/settings/tokens
+创建一个新的 token，权限至少需要：repo（完整权限）
+
+===========================================
+第三步：配置 GitHub Pages
+===========================================
+
+推送成功后：
+
+1. 访问：https://github.com/liuxuerong1221-hash/BEST-park-new/settings/pages
+
+2. 在 "Build and deployment" 部分：
+   - Source: 选择 "GitHub Actions"
+
+3. 等待 2-3 分钟，GitHub Actions 会自动构建和部署
+
+4. 刷新页面，您会看到：
+   "Your site is live at https://liuxuerong1221-hash.github.io/BEST-park-new/"
+
+===========================================
+验证部署
+===========================================
+
+查看部署进度：
+https://github.com/liuxuerong1221-hash/BEST-park-new/actions
+
+绿色勾号 ✓ = 部署成功
+红色叉号 ✗ = 部署失败（查看日志）
+
+===========================================
+最终结果
+===========================================
+
+完成后，您将拥有两个独立的地址：
+
+1. 原地址（保持不变）：
+   https://liuxuerong1221-hash.github.io/BEST/
+
+2. 新地址（可以自由修改）：
+   https://liuxuerong1221-hash.github.io/BEST-park-new/
+
+===========================================
+后续修改新地址的内容
+===========================================
+
+cd /Users/chenjiao/Documents/01-cc文件/BEST-park-new
+
+# 进行您的修改...
+
+# 提交并推送
+git add .
+git commit -m "您的修改说明"
+git push
+
+# GitHub Actions 会自动重新部署到新地址
+
+===========================================
+需要帮助？
+===========================================
+
+如果遇到问题，请告诉我具体的错误信息。
