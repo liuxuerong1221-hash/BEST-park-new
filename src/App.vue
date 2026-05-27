@@ -50,4 +50,29 @@ const innerStyle = computed(() => ({
   top: 0;
   left: 0;
 }
+
+/* 大屏浅色背景叠加四边遮罩：让顶部/底部/左右边缘的 UI 在浅色航拍图上可读
+   仅作用于使用大屏背景的视图（命名约定：根容器__bg），机房动环、机柜独立背景不受影响 */
+.scale-inner [class$="__bg"]:not(.security-mach__bg):not(.security-cabinet__bg)::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 72% 68% at 50% 50%,
+      rgba(18, 35, 58, 0) 0%,
+      rgba(18, 35, 58, 0) 48%,
+      rgba(18, 35, 58, 0.42) 82%,
+      rgba(11, 22, 40, 0.66) 100%),
+    linear-gradient(to right,
+      rgba(18, 35, 58, 0.55) 0%,
+      rgba(18, 35, 58, 0) 12%,
+      rgba(18, 35, 58, 0) 88%,
+      rgba(18, 35, 58, 0.55) 100%),
+    linear-gradient(to bottom,
+      rgba(18, 35, 58, 0.6) 0%,
+      rgba(18, 35, 58, 0) 14%,
+      rgba(18, 35, 58, 0) 84%,
+      rgba(18, 35, 58, 0.6) 100%);
+}
 </style>
